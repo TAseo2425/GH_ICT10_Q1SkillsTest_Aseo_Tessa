@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Skills Test: Food Ordering System</title>
+</head>
+<style>
+    body{
+        font-family: "Sour Gummy", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal; 
+        background-image: url(https://i.pinimg.com/736x/62/32/8c/62328c7d3a578c3d2289547a10bfe57a.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #589DB3;
+        text-align: center;
+    }
+    #header{
+        background-color: blanchedalmond;
+        padding: 25px;
+        font-size: large;
+        margin-bottom: 30px;
+    }
+    #customer_contact , #menu , #output{
+        background-color: #FFF7F0;
+        padding: 20px;
+        margin: 50px;
+        border-radius: 13px;
+        border: blanchedalmond solid 0.7px;
+        font-size: large;
+        text-align: center;
+
+    }
+    input{
+        width:40px;
+        margin-left: 10px;
+    }
+</style>
+<body>  <py-script src="main.py"></py-script>
+
+<div id="entire">
+    <div id="header">
+        <h1 id="name"></h1>
+        <p id="system"></p>
+    </div>
+
+    <div class="row">
+        <div id="customer_contact" class="col md-6">
+            <h3>☻ Customer Info</h3>
+            <label>Name:</label>
+            <input type="text" id="cname" class="form-control" placeholder="Enter name for order">
+
+            <label>Address:</label>
+            <input type="text" id="caddress" class="form-control" placeholder="Enter your address">
+
+            <label>Contact Number:</label>
+            <input type="text" id="cnumb" class="form-control" placeholder="Enter a mobile number">
+        </div>
+
+        <div id="menu" class="col md-6">
+            <h3>🗒 Menu</h3>
+            <label>Gilded Hall - ₱1331<input type="number" id="gilded_hall" value="0" min="0" max="20"></label> <br>
+            <label>Almond Tofu - ₱1200<input type="number" id="almond_tofu" value="0" min="0" max="20"></label> <br>
+            <label>Jade Parcels - ₱750<input type="number" id="jade_parcels" value="0" min="0" max="20"></label> <br>
+            <label>Cassoulet - ₱250<input type="number" id="cassoulet" value="0" min="0" max="20"></label> <br>
+            <label>Crystal Shrimp - ₱130<input type="number" id="crystal_shrimp" value="0" min="0" max="20"></label>
+        </div>
+    </div>
+
+    <div id="output">Order summary will appear here.</div>
+
+    <div>
+        <br><button id="order" class="btn btn-light" py-click="summary_order" value="Order">Order</button>
+    </div>
+
+</div>
+
+</body>
+</html>
